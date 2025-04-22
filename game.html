@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة الذاكرة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="game-header">
+            <div class="player-info">
+                <div class="avatar">
+                    <i id="playerAvatar" class="fas fa-user"></i>
+                </div>
+                <span id="playerDisplayName">اللاعب</span>
+            </div>
+            
+            <h1><i class="fas fa-brain"></i> لعبة الذاكرة</h1>
+            
+            <div class="game-controls">
+                <button id="settingsBtn"><i class="fas fa-cog"></i> الإعدادات</button>
+                <button id="newGameBtn"><i class="fas fa-plus-circle"></i> لعبة جديدة</button>
+                <button id="helpBtn"><i class="fas fa-question-circle"></i> التعليمات</button>
+            </div>
+        </div>
+
+        <div class="game-info">
+            <div class="stat-box">
+                <i class="fas fa-stopwatch"></i>
+                <span id="timer">00:00</span>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-running"></i>
+                <span id="moves">0</span> حركات
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-star"></i>
+                <span id="score">0</span> نقاط
+            </div>
+            <div class="stat-box hint-btn" id="hintBtn">
+                <i class="fas fa-lightbulb"></i>
+                <span id="hints">3</span> مساعدات
+            </div>
+        </div>
+
+        <div class="game-board" id="gameBoard"></div>
+
+        <div class="instructions-modal" id="instructionsModal">
+            <div class="modal-content">
+                <h2><i class="fas fa-question-circle"></i> كيفية اللعب</h2>
+                <ul>
+                    <li>الهدف من اللعبة هو العثور على جميع الأزواج المتطابقة</li>
+                    <li>انقر على البطاقات لقلبها ومحاولة العثور على الأزواج المتطابقة</li>
+                    <li>عندما تجد زوجاً متطابقاً، تبقى البطاقات مكشوفة</li>
+                    <li>إذا لم تكن البطاقات متطابقة، ستنقلب مرة أخرى بعد ثانية</li>
+                    <li>حاول إكمال اللعبة بأقل عدد من الحركات وفي أقصر وقت</li>
+                    <li>يمكنك استخدام المساعدات للعثور على أزواج</li>
+                </ul>
+                <button id="closeInstructions">حسناً</button>
+            </div>
+        </div>
+
+        <div class="result-modal" id="resultModal">
+            <div class="modal-content">
+                <h2><i class="fas fa-trophy"></i> تهانينا!</h2>
+                <div class="result-stats">
+                    <p>الوقت: <span id="finalTime">00:00</span></p>
+                    <p>الحركات: <span id="finalMoves">0</span></p>
+                    <p>النقاط: <span id="finalScore">0</span></p>
+                    <p>التقييم: <span id="finalRating">⭐⭐⭐⭐⭐</span></p>
+                </div>
+                <div class="result-actions">
+                    <button id="playAgainBtn"><i class="fas fa-redo"></i> لعب مرة أخرى</button>
+                    <button id="shareBtn"><i class="fas fa-share-alt"></i> مشاركة النتيجة</button>
+                </div>
+            </div>
+        </div>
+
+        <audio id="flipSound"></audio>
+        <audio id="matchSound"></audio>
+        <audio id="winSound"></audio>
+        <audio id="hintSound"></audio>
+        <audio id="errorSound"></audio>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

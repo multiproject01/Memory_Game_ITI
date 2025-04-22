@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة الذاكرة - الإعدادات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container settings-container">
+        <div class="settings-box">
+            <div class="header">
+                <h1><i class="fas fa-cog"></i> إعدادات اللعبة</h1>
+                <p>مرحباً، <span id="playerName">اللاعب</span>!</p>
+            </div>
+            
+            <div class="settings-section">
+                <h2><i class="fas fa-sliders-h"></i> إعدادات عامة</h2>
+                
+                <div class="setting-item">
+                    <label for="difficultySelect">مستوى الصعوبة:</label>
+                    <select id="difficultySelect">
+                        <option value="easy">سهل (6 أزواج)</option>
+                        <option value="medium" selected>متوسط (8 أزواج)</option>
+                        <option value="hard">صعب (12 زوج)</option>
+                    </select>
+                </div>
+                
+                <div class="setting-item">
+                    <label for="themeSelect">موضوع البطاقات:</label>
+                    <select id="themeSelect">
+                        <option value="animals" selected>حيوانات</option>
+                        <option value="fruits">فواكه</option>
+                        <option value="flags">أعلام</option>
+                        <option value="emojis">إيموجي</option>
+                    </select>
+                </div>
+                
+                <div class="setting-item">
+                    <label for="hintsCount">عدد المساعدات:</label>
+                    <input type="number" id="hintsCount" min="0" max="5" value="3">
+                </div>
+                
+                <div class="setting-item toggle">
+                    <label for="soundToggle">الأصوات:</label>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="soundToggle" checked>
+                        <span class="slider"></span>
+                    </div>
+                </div>
+                
+                <div class="setting-item toggle">
+                    <label for="timerToggle">إظهار المؤقت:</label>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="timerToggle" checked>
+                        <span class="slider"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <h2><i class="fas fa-user-cog"></i> إعدادات الحساب</h2>
+                
+                <div class="setting-item">
+                    <label for="avatarSelect">الصورة الرمزية:</label>
+                    <div class="avatar-options">
+                        <div class="avatar-option selected" data-avatar="1">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="avatar-option" data-avatar="2">
+                            <i class="fas fa-user-ninja"></i>
+                        </div>
+                        <div class="avatar-option" data-avatar="3">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <div class="avatar-option" data-avatar="4">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="setting-item">
+                    <label for="displayName">اسم العرض:</label>
+                    <input type="text" id="displayName" placeholder="أدخل اسم العرض">
+                </div>
+            </div>
+            
+            <div class="buttons-group">
+                <button id="saveSettingsBtn" class="btn btn-primary">
+                    <i class="fas fa-save"></i> حفظ الإعدادات
+                </button>
+                <button id="startGameBtn" class="btn btn-success">
+                    <i class="fas fa-play"></i> بدء اللعبة
+                </button>
+                <button id="logoutBtn" class="btn btn-danger">
+                    <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="settings.js"></script>
+</body>
+</html>

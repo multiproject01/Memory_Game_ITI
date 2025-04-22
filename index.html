@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة الذاكرة - تسجيل الدخول</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container login-container">
+        <div class="login-box">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <h1>لعبة الذاكرة</h1>
+            </div>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username"><i class="fas fa-user"></i> اسم المستخدم</label>
+                    <input type="text" id="username" placeholder="أدخل اسم المستخدم" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> كلمة المرور</label>
+                    <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
+                </div>
+                
+                <div class="form-group remember-me">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">تذكرني</label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt"></i> تسجيل الدخول
+                </button>
+            </form>
+            
+            <div class="guest-login">
+                <button id="guestLoginBtn" class="btn btn-secondary">
+                    <i class="fas fa-user-secret"></i> الدخول كزائر
+                </button>
+            </div>
+            
+            <div class="register-link">
+                ليس لديك حساب؟ <a href="#" id="registerLink">إنشاء حساب جديد</a>
+            </div>
+        </div>
+        
+        <div class="register-box hidden">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <h1>إنشاء حساب جديد</h1>
+            </div>
+            
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="newUsername"><i class="fas fa-user"></i> اسم المستخدم</label>
+                    <input type="text" id="newUsername" placeholder="أدخل اسم المستخدم" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
+                    <input type="email" id="email" placeholder="أدخل البريد الإلكتروني" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="newPassword"><i class="fas fa-lock"></i> كلمة المرور</label>
+                    <input type="password" id="newPassword" placeholder="أدخل كلمة المرور" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword"><i class="fas fa-lock"></i> تأكيد كلمة المرور</label>
+                    <input type="password" id="confirmPassword" placeholder="أعد إدخال كلمة المرور" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-user-plus"></i> إنشاء حساب
+                </button>
+            </form>
+            
+            <div class="login-link">
+                لديك حساب بالفعل؟ <a href="#" id="loginLink">تسجيل الدخول</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="login.js"></script>
+</body>
+</html>

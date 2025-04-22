@@ -1,0 +1,652 @@
+/* ===== COMMON STYLES ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Tajawal", sans-serif;
+}
+
+:root {
+  --primary-color: #3498db;
+  --primary-dark: #2980b9;
+  --secondary-color: #2ecc71;
+  --secondary-dark: #27ae60;
+  --danger-color: #e74c3c;
+  --danger-dark: #c0392b;
+  --warning-color: #f1c40f;
+  --warning-dark: #f39c12;
+  --text-color: #2c3e50;
+  --light-bg: #f5f7fa;
+  --card-bg: #ecf0f1;
+  --white: #ffffff;
+  --gray: #bdc3c7;
+  --dark-gray: #7f8c8d;
+  --black: #34495e;
+  --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  background-color: var(--gray);
+  color: var(--black);
+}
+
+.btn-secondary:hover {
+  background-color: var(--dark-gray);
+  color: var(--white);
+}
+
+.btn-success {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.btn-success:hover {
+  background-color: var(--secondary-dark);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: var(--white);
+}
+
+.btn-danger:hover {
+  background-color: var(--danger-dark);
+}
+
+/* ===== LOGIN PAGE STYLES ===== */
+.login-container {
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+}
+
+.login-box,
+.register-box {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--shadow-lg);
+  padding: 30px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+.logo i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.logo h1 {
+  color: var(--text-color);
+  font-size: 2rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.remember-me input {
+  width: auto;
+}
+
+.guest-login {
+  margin-top: 20px;
+}
+
+.register-link,
+.login-link {
+  margin-top: 20px;
+  color: var(--dark-gray);
+}
+
+.register-link a,
+.login-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover,
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* ===== SETTINGS PAGE STYLES ===== */
+.settings-container {
+  background: linear-gradient(135deg, #2ecc71, #3498db);
+}
+
+.settings-box {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--shadow-lg);
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  color: var(--text-color);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: var(--dark-gray);
+  font-size: 1.1rem;
+}
+
+.settings-section {
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 20px;
+}
+
+.settings-section h2 {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.setting-item label {
+  font-weight: bold;
+}
+
+.setting-item select,
+.setting-item input[type="text"],
+.setting-item input[type="number"] {
+  padding: 8px 15px;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  font-size: 1rem;
+  min-width: 150px;
+}
+
+.setting-item select:focus,
+.setting-item input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--gray);
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.avatar-options {
+  display: flex;
+  gap: 15px;
+}
+
+.avatar-option {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.avatar-option i {
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+.avatar-option.selected {
+  background-color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.buttons-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ===== GAME PAGE STYLES ===== */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar i {
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+.game-header h1 {
+  color: var(--text-color);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.game-header h1 i {
+  color: var(--primary-color);
+}
+
+.game-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.game-controls button {
+  padding: 8px 15px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.game-controls button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.game-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-box {
+  background-color: var(--white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.hint-btn {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hint-btn:hover {
+  background-color: var(--warning-color);
+  color: var(--text-color);
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 0 auto 30px;
+  max-width: 600px;
+}
+
+.card {
+  aspect-ratio: 1 / 1;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card.matched {
+  background-color: var(--secondary-color);
+  cursor: default;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 2rem;
+}
+
+.card .back {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: var(--white);
+}
+
+.card .front {
+  background: linear-gradient(135deg, var(--card-bg), var(--gray));
+  color: var(--text-color);
+  transform: rotateY(180deg);
+}
+
+.instructions-modal,
+.result-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content h2 {
+  color: var(--text-color);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-content ul {
+  text-align: right;
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+
+.modal-content li {
+  margin-bottom: 10px;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.modal-content button:hover {
+  background-color: var(--primary-dark);
+}
+
+.result-stats {
+  margin: 20px 0;
+  text-align: right;
+}
+
+.result-stats p {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .game-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .player-info {
+    justify-content: center;
+  }
+
+  .game-controls {
+    justify-content: center;
+  }
+
+  .game-board {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card .front,
+  .card .back {
+    font-size: 1.5rem;
+  }
+
+  .setting-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .setting-item select,
+  .setting-item input[type="text"],
+  .setting-item input[type="number"] {
+    width: 100%;
+  }
+
+  .buttons-group {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-board {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .game-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .game-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .game-controls button {
+    width: 100%;
+  }
+
+  .result-actions {
+    flex-direction: column;
+  }
+}
